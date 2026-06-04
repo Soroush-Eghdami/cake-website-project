@@ -1,5 +1,8 @@
-import searchIcon from "../../assets/NavbarIcon/searchIcon.png";
-import boxIcon from "../../assets/NavbarIcon/boxIcon.png";
+import redSearchIcon from "../../assets/NavbarIcon/redSearchIcon.svg";
+import blackSearchIcon from "../../assets/NavbarIcon/blackSearchIcon.svg";
+import userBlackIcon from "../../assets/NavbarIcon/userBlackIcon.svg";
+import userRedIcon from "../../assets/NavbarIcon/userRedIcon.svg";
+import boxIcon from "../../assets/NavbarIcon/boxIcon.svg";
 
 export default function Navbar() {
   return (
@@ -10,14 +13,18 @@ export default function Navbar() {
           <a
             href="#"
             className="text-2xl font-black tracking-tight text-red-700"
+            style={{ fontFamily: "Playfair Display" }}
           >
-            Dakingo
+            CAKE SHOP
           </a>
 
-          <div className="hidden md:flex items-center gap-2 bg-orange-50 rounded-full px-4 py-2 w-72 border border-red-100 focus-within:border-red-700 transition-colors">
-            <img src={searchIcon} alt="search"
-                className="w-4 h-4 text-[#B83232] shrink-0"
+          <div className="group md:flex items-center gap-2 bg-orange-50 rounded-full px-4 py-2 w-72 border border-red-100 focus-within:border-red-700 transition-colors">
+            <img src={blackSearchIcon} alt="search"
+                className="w-5 h-5 block group-hover:hidden"
                 />
+
+            <img src={redSearchIcon} alt="search"
+                  className="w-5 h-5 hidden group-hover:block"/>
 
             <input
               type="text"
@@ -28,16 +35,25 @@ export default function Navbar() {
 
           <div className="flex items-center gap-3">
 
-            <button className="hidden md:flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-red-700 transition-colors">
-
-              Login / Signup
+            <button className="group relative hidden md:flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-red-700 transition-colors
+                            after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#B83232] after:transition-all after:duration-300 hover:after:w-full">
+              <img
+                src={userBlackIcon}
+                alt="user"
+                className="w-5 h-5 block group-hover:hidden"
+              />
+              <img
+                src={userRedIcon}
+                alt="user"
+                className="w-5 h-5 hidden group-hover:block"
+              />
+              <span>Login / Signup</span>
             </button>
 
-            <button className="relative p-2 rounded-full hover:bg-red-50 transition-colors group">
-                <img src={boxIcon} alt="box" 
-                className="w-5 h-5 text-gray-700 group-hover:text-red-700 transition-colors"/>
-
-              <span className="absolute -top-0.5 -right-0.5 flex items-center justify-center w-4 h-4 rounded-full bg-[#B83232] text-white text-[10px] font-bold">
+            <button className="relative p-2 rounded-full hover:bg-red-50 transition-colors group cursor-pointer">
+              <img src={boxIcon} alt="box"
+              className="w-7 h-7"/>
+              <span className="absolute top-1 right-0 flex items-center justify-center w-4 h-4 rounded-full bg-[#B83232] text-white text-[10px] font-bold">
                 4
               </span>
             </button>
