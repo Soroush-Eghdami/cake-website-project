@@ -20,11 +20,11 @@ export default function Navbar() {
 
           <div className="group md:flex items-center gap-2 bg-orange-50 rounded-full px-4 py-2 w-72 border border-red-100 focus-within:border-red-700 transition-colors">
             <img src={blackSearchIcon} alt="search"
-                className="w-5 h-5 block group-hover:hidden"
+                className="w-5 h-5 block group-focus-within:hidden"
                 />
 
             <img src={redSearchIcon} alt="search"
-                  className="w-5 h-5 hidden group-hover:block"/>
+                  className="w-5 h-5 hidden group-focus-within:block"/>
 
             <input
               type="text"
