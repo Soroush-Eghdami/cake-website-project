@@ -1,8 +1,9 @@
+import MainHome from "../components/home/MainHome"
 
 const HomePage = () => {
   return (
     <div>
-      <h1>heme page</h1>
+      <MainHome />
 
     </div>
   )
