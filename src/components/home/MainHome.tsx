@@ -1,13 +1,69 @@
-import strawberry from "../../assets/HomeIcon/Strawberry-cake.jpg";
-import macaron from "../../assets/HomeIcon/macaron.jpg";
-import blueCake from "../../assets/HomeIcon/blueCake.jpg";
 import { MdOutlineCookie } from "react-icons/md";
 import { MdAddCircleOutline } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { PiWineDuotone } from "react-icons/pi";
-
+import strawberry from "../../assets/HomeIcon/Strawberry-cake.jpg";
+import macaron from "../../assets/HomeIcon/macaron.jpg";
+import blueCake from "../../assets/HomeIcon/blueCake.jpg";
+import chocolateCake from "../../assets/HomeIcon/chocolate-cake.jpg";
+import pancake from "../../assets/HomeIcon/pancake.jpg";
+import orangeCake from "../../assets/HomeIcon/orange-cake.jpg";
+import frutiCake from "../../assets/HomeIcon/fruti-cake.jpg";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { useState } from "react";
 
 const MainHome = () => {
+  const products = [
+  {
+    id: 1,
+    name: "Rich Chocolate Truffle Cake",
+    price: "$500",
+    oldPrice: "$620",
+    rating: "★★★★★",
+    reviews: 500,
+    image: chocolateCake,
+
+   },
+  {
+    id: 2,
+    name: "Choco Chip Truffle Cake",
+    price: "₹509",
+    oldPrice: "₹640",
+    rating: "★★★★★",
+    reviews: 300,
+    image: pancake,
+  },
+  {
+    id: 3,
+    name: "Tropical Fruit N Almond Cake",
+    price: "₹509",
+    oldPrice: "₹650",
+    rating: "★★★★☆",
+    reviews: 700,
+    image: orangeCake,
+  },
+  {
+    id: 4,
+    name: "Rich Butterscotch Crunch Cake",
+    price: "₹399",
+    oldPrice: "₹520",
+    rating: "★★★★★",
+    reviews: 500,
+    image: frutiCake,
+    },
+];
+
+  const [liked, setLiked] = useState({});
+  const toggleLike = (id) => {
+  setLiked((prev) => ({
+    ...prev,
+    [id]: !prev[id],
+  }));
+};
+
+
+
+
   return (
     <>
       <section className="bg-[#B83232] overflow-hidden relative">
@@ -93,13 +149,13 @@ const MainHome = () => {
           </div>
         </div>
       </section>
-
+        {/* menu */}
       <section className="max-w-6xl mx-auto px-4 py-10">
         <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             
             <div>
-              <h2 className="italic text-2xl font-bold text-gray-900">
+              <h2 className="font-serif text-2xl font-bold text-gray-900">
                 Menu
               </h2>
               <p className="text-sm text-gray-400 mt-1">
@@ -111,21 +167,21 @@ const MainHome = () => {
 
               <button className="flex flex-col items-center gap-2 px-5 py-3 bg-[#B83232] text-white rounded-2xl shadow-md shadow-red-300/30 hover:bg-red-900 transition-colors">
                 <MdAddCircleOutline />
-                <span className="text-xs font-semibold tracking-wide">
+                <span className="text-xs font-semibold">
                   CLASSIC
                 </span>
               </button>
 
               <button className="flex flex-col items-center gap-2 px-5 py-3 bg-red-50 text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
                 <PiWineDuotone />
-                <span className="text-xs font-semibold tracking-wide">
+                <span className="text-xs font-semibold">
                   GOURMET
                 </span>
               </button>
 
               <button className="flex flex-col items-center gap-2 px-5 py-3 bg-red-50 text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
                 <IoLocationOutline />
-                <span className="text-xs font-semibold tracking-wide">
+                <span className="text-xs font-semibold">
                   DESSERTS
                 </span>
               </button>
@@ -139,6 +195,75 @@ const MainHome = () => {
 
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Bestsellers */}
+      <section className="max-w-6xl mx-auto px-4 pb-12">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="font-serif text-2xl font-bold text-gray-900">
+            Bestsellers from Across the Country
+          </h2>
+
+          <a
+            className="bg-[#B83232] text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-red-900 transition-colors">
+            VIEW ALL
+          </a>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="group bg-white rounded-2xl shadow-md cursor-pointer hover:scale-105 hover:shadow-xl transition-transform">
+              <div className="relative bg-[#d2d4a044] h-44 flex rounded-t-2xl items-center justify-center p-4">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="product-img h-36 w-36 object-contain drop-shadow-lg"
+                />
+
+              <button
+                onClick={() => toggleLike(product.id)}
+                className="absolute top-3 right-3 w-7 h-7 rounded-full bg-[#86333333] flex items-center justify-center hover:bg-red-300 transition-colors"
+              >
+                {liked[product.id] ? (
+                  <FaHeart className="text-red-700" />
+                ) : (
+                  <FaRegHeart className="text-white" />
+                )}
+              </button>
+              </div>
+
+              <div className="p-3">
+                <h3 className="text-sm font-semibold text-gray-800">
+                  {product.name}
+                </h3>
+
+                <div className="flex items-center gap-1 mt-1">
+                  <span className="text-red-800 font-bold text-sm">
+                    {product.price}
+                  </span>
+                  <span className="text-gray-400 text-xs line-through ml-1">
+                    {product.oldPrice}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-1 mt-1">
+                  <span className="text-yellow-600 text-xs">
+                    {product.rating}
+                  </span>
+                  <span className="text-gray-400 text-xs">
+                    {product.reviews}
+                  </span>
+                </div>
+
+                <button className="mt-2 w-full bg-[#B83232] text-white text-xs font-semibold py-1.5 rounded-lg hover:bg-red-900 transition-colors">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       
