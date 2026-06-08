@@ -1,6 +1,11 @@
 import strawberry from "../../assets/HomeIcon/Strawberry-cake.jpg";
 import macaron from "../../assets/HomeIcon/macaron.jpg";
 import blueCake from "../../assets/HomeIcon/blueCake.jpg";
+import { MdOutlineCookie } from "react-icons/md";
+import { MdAddCircleOutline } from "react-icons/md";
+import { IoLocationOutline } from "react-icons/io5";
+import { PiWineDuotone } from "react-icons/pi";
+
 
 const MainHome = () => {
   return (
@@ -25,7 +30,7 @@ const MainHome = () => {
 
 
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-16 flex items-center gap-8 relative z-10">
-          <div className="shrink-0 w-52 h-52 md:w-64 md:h-64 rounded-full bg-white/10 border-4 border-white/20 overflow-hidden shadow-2xl animate-[fade-in_0.6s_ease_both]">
+          <div className="shrink-0 w-52 h-52 md:w-64 md:h-64 rounded-full bg-white/10 border-4 border-white/20 overflow-hidden shadow-2xl">
             <img
               src={strawberry}
               alt="Strawberry Cake"
@@ -88,6 +93,55 @@ const MainHome = () => {
           </div>
         </div>
       </section>
+
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            
+            <div>
+              <h2 className="italic text-2xl font-bold text-gray-900">
+                Menu
+              </h2>
+              <p className="text-sm text-gray-400 mt-1">
+                What will you wish for?
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+
+              <button className="flex flex-col items-center gap-2 px-5 py-3 bg-[#B83232] text-white rounded-2xl shadow-md shadow-red-300/30 hover:bg-red-900 transition-colors">
+                <MdAddCircleOutline />
+                <span className="text-xs font-semibold tracking-wide">
+                  CLASSIC
+                </span>
+              </button>
+
+              <button className="flex flex-col items-center gap-2 px-5 py-3 bg-red-50 text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
+                <PiWineDuotone />
+                <span className="text-xs font-semibold tracking-wide">
+                  GOURMET
+                </span>
+              </button>
+
+              <button className="flex flex-col items-center gap-2 px-5 py-3 bg-red-50 text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
+                <IoLocationOutline />
+                <span className="text-xs font-semibold tracking-wide">
+                  DESSERTS
+                </span>
+              </button>
+
+              <button className="flex flex-col items-center gap-2 px-5 py-3 bg-red-50 text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
+                <MdOutlineCookie />
+                <span className="text-xs font-semibold tracking-wide">
+                  COOKIES
+                </span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </>
   );
 };
