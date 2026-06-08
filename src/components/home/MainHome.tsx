@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { MdOutlineCookie } from "react-icons/md";
 import { MdAddCircleOutline } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
-import { PiCoffee, PiHandWithdrawLight, PiHandWithdrawThin, PiWineDuotone } from "react-icons/pi";
+import { PiCoffee, PiHandWithdrawLight, PiWineDuotone } from "react-icons/pi";
+import { FaFacebook, FaHeart, FaInstagram, FaRegHeart, FaTelegram } from "react-icons/fa";
+import { BsTicketPerforated, BsTruck } from "react-icons/bs";
+import { LuUsers } from "react-icons/lu";
 import strawberry from "../../assets/HomeIcon/Strawberry-cake.jpg";
 import macaron from "../../assets/HomeIcon/macaron.jpg";
 import blueCake from "../../assets/HomeIcon/blueCake.jpg";
@@ -12,14 +16,10 @@ import fruitCake from "../../assets/HomeIcon/fruit-cake.jpg";
 import chicken from "../../assets/HomeIcon/chicken.jpg";
 import berger from "../../assets/HomeIcon/berger.jpg";
 import shrimp from "../../assets/HomeIcon/shrimp.jpg";
-import { FaFacebook, FaHeart, FaInstagram, FaRegHeart, FaTelegram } from "react-icons/fa";
 import meat from "../../assets/HomeIcon/meat.jpg";
 import meat2 from "../../assets/HomeIcon/meat2.jpg";
 import corns from "../../assets/HomeIcon/corns.jpg";
-import { useState } from "react";
-import { HiOutlineTruck } from "react-icons/hi";
-import { BsTicketPerforated, BsTruck } from "react-icons/bs";
-import { LuUsers } from "react-icons/lu";
+
 
 const MainHome = () => {
   const products = [
@@ -397,8 +397,6 @@ const MainHome = () => {
           </div>
         </div>
       </section>
-
-      
     </>
   );
 };
