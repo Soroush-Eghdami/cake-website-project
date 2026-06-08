@@ -12,7 +12,7 @@ import fruitCake from "../../assets/HomeIcon/fruit-cake.jpg";
 import chicken from "../../assets/HomeIcon/chicken.jpg";
 import berger from "../../assets/HomeIcon/berger.jpg";
 import shrimp from "../../assets/HomeIcon/shrimp.jpg";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaFacebook, FaHeart, FaInstagram, FaRegHeart, FaTelegram } from "react-icons/fa";
 import meat from "../../assets/HomeIcon/meat.jpg";
 import meat2 from "../../assets/HomeIcon/meat2.jpg";
 import corns from "../../assets/HomeIcon/corns.jpg";
@@ -305,7 +305,7 @@ const MainHome = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col items-center gap-2 bg-[#f4eed4] rounded-xl p-3 text-red-700 hover:bg-red-100 transition-colors">
+                <div className="flex flex-col items-center gap-2 bg-[#f4eed4] rounded-xl p-3 text-red-700 hover:bg-red-100 transition-colorsm">
                   <PiHandWithdrawLight
                   className="w-7 h-7" />
 
@@ -357,6 +357,31 @@ const MainHome = () => {
                 </div>
               </div>
             </div>
+            
+             {/* Social */}
+            <div className="bg-white rounded-2xl px-5 py-3 shadow-md flex items-center justify-between">
+              <div className="flex -space-x-3">
+              </div>
+
+              <p className="text-sm font-semibold text-gray-700 mr-auto">
+                Follow us on social!
+              </p>
+
+              <div className="flex gap-2">
+                <a
+                  className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-700 hover:bg-red-800 hover:text-white transition-colors">
+                  <FaInstagram />
+                </a>
+                <a
+                  className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-700 hover:bg-red-800 hover:text-white transition-colors">
+                  <FaFacebook />
+                </a>
+                                <a
+                  className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-700 hover:bg-red-800 hover:text-white transition-colors">
+                <FaTelegram />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Gallery */}
@@ -366,7 +391,7 @@ const MainHome = () => {
                 key={index}
                 src={img}
                 alt={`food-${index}`}
-                className="w-full h-48 object-cover hover:scale-105 hover:shadow-xl transition-transform"
+                className="w-full h-48 object-cover rounded-2xl hover:scale-105 hover:shadow-xl transition-transform"
               />
             ))}
           </div>
