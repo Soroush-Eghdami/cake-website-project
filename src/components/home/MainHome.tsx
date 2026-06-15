@@ -13,12 +13,12 @@ import chocolateCake from "../../assets/HomeIcon/chocolate-cake.jpg";
 import pancake from "../../assets/HomeIcon/pancake.jpg";
 import orangeCake from "../../assets/HomeIcon/orange-cake.jpg";
 import fruitCake from "../../assets/HomeIcon/fruit-cake.jpg";
-import chicken from "../../assets/HomeIcon/chicken.jpg";
-import berger from "../../assets/HomeIcon/berger.jpg";
-import shrimp from "../../assets/HomeIcon/shrimp.jpg";
-import meat from "../../assets/HomeIcon/meat.jpg";
-import meat2 from "../../assets/HomeIcon/meat2.jpg";
-import corns from "../../assets/HomeIcon/corns.jpg";
+import pink from "../../assets/HomeIcon/pink.jpg";
+import lila from "../../assets/HomeIcon/lila.jpg";
+import cherry from "../../assets/HomeIcon/cherry.jpg";
+import purple from "../../assets/HomeIcon/purple.jpg";
+import dark from "../../assets/HomeIcon/dark.jpg";
+import blue from "../../assets/HomeIcon/blue.jpg";
 
 
 const MainHome = () => {
@@ -36,8 +36,8 @@ const MainHome = () => {
   {
     id: 2,
     name: "Choco Chip Truffle Cake",
-    price: "₹509",
-    oldPrice: "₹640",
+    price: "$509",
+    oldPrice: "$640",
     rating: "★★★★★",
     reviews: 300,
     image: pancake,
@@ -45,8 +45,8 @@ const MainHome = () => {
   {
     id: 3,
     name: "Tropical Fruit N Almond Cake",
-    price: "₹509",
-    oldPrice: "₹650",
+    price: "$59",
+    oldPrice: "$6590",
     rating: "★★★★☆",
     reviews: 700,
     image: orangeCake,
@@ -54,15 +54,15 @@ const MainHome = () => {
   {
     id: 4,
     name: "Rich Butterscotch Crunch Cake",
-    price: "₹399",
-    oldPrice: "₹520",
+    price: "$399",
+    oldPrice: "$520",
     rating: "★★★★★",
     reviews: 500,
     image: fruitCake,
     },
 ];
 
-  const images = [chicken, berger, shrimp, meat, meat2, corns];
+  const images = [pink, purple, lila, dark, cherry, blue];
   const [liked, setLiked] = useState({});
   const toggleLike = (id) => {
   setLiked((prev) => ({
