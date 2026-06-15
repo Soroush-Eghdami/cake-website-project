@@ -1,6 +1,5 @@
 import { LuMessageSquareMore } from "react-icons/lu";
 
-
 function Footer() {
   return (
     <>
@@ -8,33 +7,28 @@ function Footer() {
         <div className="max-w-6xl mx-auto px-4 pt-10 pb-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
             <div className="col-span-2 md:col-span-1">
-              <h2 className="text-2xl font-black text-red-700 mb-3">
+              <h2 className="text-2xl font-black text-red-700 mb-3 footer-link">
                 CAKE SHOP
               </h2>
 
               <ul className="space-y-1.5 text-sm text-gray-500">
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Our Story
                   </a>
                 </li>
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
-                    Locate Us
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Media
                   </a>
                 </li>
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Career
                   </a>
                 </li>
@@ -42,18 +36,18 @@ function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3 footer-link">
                 Know Us
               </h4>
 
               <ul className="space-y-1.5 text-sm text-gray-500">
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Blog
                   </a>
                 </li>
@@ -61,18 +55,18 @@ function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3 footer-link">
                 Need Help
               </h4>
 
               <ul className="space-y-1.5 text-sm text-gray-500">
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Cancellation & Refund
                   </a>
                 </li>
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Privacy Policy
                   </a>
                 </li>
@@ -80,18 +74,18 @@ function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3 footer-link">
                 More Info
               </h4>
 
               <ul className="space-y-1.5 text-sm text-gray-500">
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Terms And Policy
                   </a>
                 </li>
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Custom Emblems
                   </a>
                 </li>
@@ -99,18 +93,18 @@ function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3 footer-link">
                 More Info
               </h4>
 
               <ul className="space-y-1.5 text-sm text-gray-500">
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Coupons & Offers
                   </a>
                 </li>
                 <li>
-                  <a className="hover:text-red-700 transition-colors">
+                  <a className="hover:text-red-700 transition-colors footer-link">
                     Download App
                   </a>
                 </li>
@@ -142,7 +136,7 @@ function Footer() {
         type="button"
         className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-red-800 text-white shadow-xl shadow-red-300/40 transition-all hover:bg-red-800 hover:scale-110 active:scale-95">
         <LuMessageSquareMore 
-            className="w-6 h-6 "/>
+            className="w-6 h-6"/>
       </button>
     </>
   );
