@@ -5,3 +5,16 @@
 body {
   background-color: #f1ebe4;
 }
+
+@utility footer-link {
+  @apply relative inline-block transition-colors hover:text-red-700;
+
+  &::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 h-0.5 w-0 bg-red-700 transition-all duration-300;
+  }
+
+  &:hover::after {
+    @apply w-full;
+  }
+}

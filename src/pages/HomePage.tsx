@@ -1,3 +1,4 @@
+import Footer from "../components/footer/Footer";
 import BestSellerSection from "../components/home/BestSellerSection";
 import HeroSection from "../components/home/HeroSection";
 import MenuSection from "../components/home/MenuSection";
@@ -10,6 +11,7 @@ const HomePage = () => {
       <MenuSection />
       <BestSellerSection />
       <PromiseSection />
+      <Footer />
     </>
   )
 }
