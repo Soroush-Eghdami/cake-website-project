@@ -1,49 +1,6 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
-
-import chocolateCake from "../../assets/HomeIcon/chocolate-cake.jpg";
-import pancake from "../../assets/HomeIcon/pancake.jpg";
-import orangeCake from "../../assets/HomeIcon/orange-cake.jpg";
-import fruitCake from "../../assets/HomeIcon/fruit-cake.jpg";
-
-const products = [
-  {
-    id: 1,
-    name: "Rich Chocolate Truffle Cake",
-    price: "$500",
-    oldPrice: "$620",
-    rating: "★★★★★",
-    reviews: 500,
-    image: chocolateCake,
-  },
-  {
-    id: 2,
-    name: "Choco Chip Truffle Cake",
-    price: "$509",
-    oldPrice: "$640",
-    rating: "★★★★★",
-    reviews: 300,
-    image: pancake,
-  },
-  {
-    id: 3,
-    name: "Tropical Fruit N Almond Cake",
-    price: "$59",
-    oldPrice: "$6590",
-    rating: "★★★★☆",
-    reviews: 700,
-    image: orangeCake,
-  },
-  {
-    id: 4,
-    name: "Rich Butterscotch Crunch Cake",
-    price: "$399",
-    oldPrice: "$520",
-    rating: "★★★★★",
-    reviews: 500,
-    image: fruitCake,
-  },
-];
+import { products } from "../../types/ProductTypes";
 
 const BestSellerSection = () => {
   const [liked, setLiked] = useState<Record<number, boolean>>({});

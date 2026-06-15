@@ -1,4 +1,5 @@
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 type Product = {
   id: number;
@@ -16,23 +17,30 @@ type ProductCardProps = {
   onToggleLike: () => void;
 };
 
-const ProductCard = ({
-  product,
-  liked,
-  onToggleLike,
-}: ProductCardProps) => {
+const ProductCard = ({ product, liked, onToggleLike }: ProductCardProps) => {
+  const navigate = useNavigate();
+
+  const goToDetail = () => {
+    navigate(`/product/${product.id}`);
+  };
+
   return (
-    <div className="group bg-white rounded-2xl shadow-md cursor-pointer hover:scale-105 hover:shadow-xl transition-transform">
-      
-      <div className="relative bg-[#d2d4a044] h-44 flex rounded-t-2xl items-center justify-center p-4">
+    <div
+      onClick={goToDetail}
+      className="group bg-white rounded-2xl shadow-md cursor-pointer hover:scale-105 hover:shadow-xl transition-transform duration-300"
+    >
+      <div className="relative bg-[#d2d4a044] h-44 flex rounded-t-2xl items-center justify-center p-4 overflow-hidden">
         <img
           src={product.image}
           alt={product.name}
-          className="product-img h-36 w-36 object-contain drop-shadow-lg"
+          className="product-img h-36 w-36 object-contain drop-shadow-lg transition-transform duration-500 group-hover:scale-110"
         />
 
         <button
-          onClick={onToggleLike}
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleLike();
+          }}
           className="absolute top-3 right-3 w-7 h-7 rounded-full bg-[#86333333] flex items-center justify-center hover:bg-red-300 transition-colors"
         >
           {liked ? (
@@ -44,31 +52,24 @@ const ProductCard = ({
       </div>
 
       <div className="p-3">
-        <h3 className="text-sm font-semibold text-gray-800">
-          {product.name}
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-800">{product.name}</h3>
 
         <div className="flex items-center gap-1 mt-1">
-          <span className="text-red-800 font-bold text-sm">
-            {product.price}
-          </span>
-
+          <span className="text-red-800 font-bold text-sm">{product.price}</span>
           <span className="text-gray-400 text-xs line-through ml-1">
             {product.oldPrice}
           </span>
         </div>
 
         <div className="flex items-center gap-1 mt-1">
-          <span className="text-yellow-600 text-xs">
-            {product.rating}
-          </span>
-
-          <span className="text-gray-400 text-xs">
-            {product.reviews}
-          </span>
+          <span className="text-yellow-600 text-xs">{product.rating}</span>
+          <span className="text-gray-400 text-xs">{product.reviews}</span>
         </div>
 
-        <button className="mt-2 w-full bg-[#B83232] text-white text-xs font-semibold py-1.5 rounded-lg hover:bg-red-900 transition-colors">
+        <button
+          onClick={(e) => e.stopPropagation()}
+          className="mt-2 w-full bg-[#B83232] text-white text-xs font-semibold py-1.5 rounded-lg hover:bg-red-900 transition-colors"
+        >
           Add to Cart
         </button>
       </div>
