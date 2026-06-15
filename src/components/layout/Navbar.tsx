@@ -41,13 +41,13 @@ export default function Navbar() {
               </span>
             </button>
 
-            <a className="bg-[#B83232] hover:bg-red-900 text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors shadow-md">
+            <a className="bg-[#B83232] hover:bg-red-900 text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors shadow-md cursor-pointer">
               ORDER NOW
             </a>
           </div>
         </div>
 
-        <nav className="hidden md:flex items-center gap-6 pb-2 text-sm font-medium text-gray-600">
+        <nav className="hidden md:flex items-center gap-6 pb-2 text-sm font-medium text-gray-600 cursor-pointer">
           {[
             "Cakes",
             "Theme Cakes",
@@ -59,7 +59,7 @@ export default function Navbar() {
           ].map((item) => (
             <a
               key={item}
-              className="relative hover:text-[#B83232] transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#B83232] after:transition-all after:duration-300 hover:after:w-full"
+              className="footer-link"
             >
               {item}
             </a>
