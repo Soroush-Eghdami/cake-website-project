@@ -1,8 +1,5 @@
-import redSearchIcon from "../../assets/NavbarIcon/redSearchIcon.svg";
-import blackSearchIcon from "../../assets/NavbarIcon/blackSearchIcon.svg";
-import userBlackIcon from "../../assets/NavbarIcon/userBlackIcon.svg";
-import userRedIcon from "../../assets/NavbarIcon/userRedIcon.svg";
-import boxIcon from "../../assets/NavbarIcon/boxIcon.svg";
+import { IoBagHandleOutline, IoSearch } from "react-icons/io5";
+import { FiUser } from "react-icons/fi";
 
 export default function Navbar() {
   return (
@@ -17,22 +14,12 @@ export default function Navbar() {
           </a>
 
           <div className="group md:flex items-center gap-2 bg-orange-50 rounded-full px-4 py-2 w-72 border border-red-100 focus-within:border-red-700 transition-colors">
-            <img
-              src={blackSearchIcon}
-              alt="search"
-              className="w-5 h-5 block group-focus-within:hidden"
-            />
-
-            <img
-              src={redSearchIcon}
-              alt="search"
-              className="w-5 h-5 hidden group-focus-within:block"
-            />
-
+            <IoSearch 
+              className="w-5 h-5 text-black group-focus-within:text-red-800 transition-colors"/>
             <input
               type="text"
               placeholder="Search cakes, desserts..."
-              className="bg-transparent text-sm text-gray-600 outline-none w-full placeholder:text-gray-400"
+              className="text-sm  outline-none w-full placeholder:text-gray-400"
             />
           </div>
 
@@ -41,21 +28,14 @@ export default function Navbar() {
               className="group relative hidden md:flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-red-700 transition-colors
                             after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#B83232] after:transition-all after:duration-300 hover:after:w-full"
             >
-              <img
-                src={userBlackIcon}
-                alt="user"
-                className="w-5 h-5 block group-hover:hidden"
-              />
-              <img
-                src={userRedIcon}
-                alt="user"
-                className="w-5 h-5 hidden group-hover:block"
-              />
+              <FiUser 
+                className="w-5 h-5"/>
               <span>Login / Signup</span>
             </button>
 
             <button className="relative p-2 rounded-full hover:bg-red-50 transition-colors group cursor-pointer">
-              <img src={boxIcon} alt="box" className="w-7 h-7" />
+              <IoBagHandleOutline 
+                  className="w-7 h-7"/>
               <span className="absolute top-1 right-0 flex items-center justify-center w-4 h-4 rounded-full bg-[#B83232] text-white text-[10px] font-bold">
                 4
               </span>
