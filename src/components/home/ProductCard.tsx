@@ -25,10 +25,7 @@ const ProductCard = ({ product, liked, onToggleLike }: ProductCardProps) => {
   };
 
   return (
-    <div
-      onClick={goToDetail}
-      className="group bg-white rounded-2xl shadow-md cursor-pointer hover:scale-105 hover:shadow-xl transition-transform duration-300"
-    >
+    <div className="group bg-white rounded-2xl shadow-md cursor-pointer hover:scale-105 hover:shadow-xl transition-transform duration-300">
       <div className="relative bg-[#d2d4a044] h-44 flex rounded-t-2xl items-center justify-center p-4 overflow-hidden">
         <img
           src={product.image}
@@ -55,7 +52,9 @@ const ProductCard = ({ product, liked, onToggleLike }: ProductCardProps) => {
         <h3 className="text-sm font-semibold text-gray-800">{product.name}</h3>
 
         <div className="flex items-center gap-1 mt-1">
-          <span className="text-red-800 font-bold text-sm">{product.price}</span>
+          <span className="text-red-800 font-bold text-sm">
+            {product.price}
+          </span>
           <span className="text-gray-400 text-xs line-through ml-1">
             {product.oldPrice}
           </span>
@@ -67,7 +66,10 @@ const ProductCard = ({ product, liked, onToggleLike }: ProductCardProps) => {
         </div>
 
         <button
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            goToDetail();
+          }}
           className="mt-2 w-full bg-[#B83232] text-white text-xs font-semibold py-1.5 rounded-lg hover:bg-red-900 transition-colors"
         >
           Add to Cart
