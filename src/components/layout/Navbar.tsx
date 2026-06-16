@@ -25,8 +25,7 @@ export default function Navbar() {
           <div className="relative flex items-center justify-between h-14 gap-4">
 
             <a
-              className="text-2xl font-black tracking-tight text-red-700 shrink-0 cursor-pointer"
-              style={{ fontFamily: "Playfair Display" }}
+              className="text-2xl font-black tracking-tight text-red-700 shrink-0 cursor-pointer font-serif"
             >
               CAKE SHOP
             </a>
