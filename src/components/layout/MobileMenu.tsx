@@ -53,8 +53,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
         <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-red-100">
           <span
-            className="text-xl font-black text-red-700 tracking-tight"
-            style={{ fontFamily: "Playfair Display" }}
+            className="text-xl font-black text-red-700 tracking-tight font-serif"
           >
             CAKE SHOP
           </span>
