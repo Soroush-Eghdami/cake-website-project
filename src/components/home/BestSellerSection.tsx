@@ -58,11 +58,11 @@ const BestSellerSection = () => {
   return (
     <section className="max-w-6xl mx-auto px-4 pb-12">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="font-serif text-2xl font-bold text-gray-900">
+        <h2 className="font-serif font-bold text-base md:text-2xl text-gray-900">
           Bestsellers from Across the Country
         </h2>
 
-        <a className="bg-[#B83232] text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-red-900 transition-colors">
+        <a className="bg-[#B83232] text-white text-xs md:text-sm font-semibold px-3 py-1.5 md:px-5 md:py-2 rounded-full hover:bg-red-900 active:bg-red-900 transition-colors flex items-center justify-center whitespace-nowrap">
           VIEW ALL
         </a>
       </div>
