@@ -72,7 +72,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <a
               key={item}
               onClick={onClose}
-              className="footer-link px-4 py-3.5 text-base font-medium text-gray-700 hover:text-red-700 active:text-red-700 rounded-xl hover:bg-[#F5E6E6] active:bg-[#F5E6E6] transition-colors relative after:absolute after:left-4 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[#B83232] after:transition-all after:duration-300 hover:after:w-[calc(100%-2rem)]"
+              className="footer-link px-4 py-3.5 text-base font-medium text-gray-700 hover:text-red-700 active:text-red-700 rounded-xl hover:bg-[#F5E6E6] active:bg-[#F5E6E6] transition-colors relative"
             >
               {item}
             </a>
