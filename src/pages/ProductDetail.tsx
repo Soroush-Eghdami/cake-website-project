@@ -3,6 +3,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { products } from "../types/ProductTypes";
 import ProductHero from "../components/cards/ProductHero";
 import ProductAbout from "../components/cards/ProductAbout";
+import ProductGallery from "../components/cards/ProductGallery";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -22,6 +23,7 @@ const ProductDetail = () => {
 
       <ProductHero product={product} />
       <ProductAbout product={product} />
+      <ProductGallery product={product} />
     </div>
   );
 };
