@@ -7,7 +7,7 @@ function Footer() {
         <div className="max-w-6xl mx-auto px-4 pt-10 pb-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
             <div className="col-span-2 md:col-span-1">
-              <h2 className="text-2xl font-black text-red-700 mb-3 footer-link">
+              <h2 className="text-2xl font-black text-red-700 mb-3">
                 CAKE SHOP
               </h2>
 
@@ -36,7 +36,7 @@ function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3 footer-link">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">
                 Know Us
               </h4>
 
@@ -55,7 +55,7 @@ function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3 footer-link">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">
                 Need Help
               </h4>
 
@@ -74,7 +74,7 @@ function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3 footer-link">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">
                 More Info
               </h4>
 
@@ -93,7 +93,7 @@ function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3 footer-link">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-3">
                 More Info
               </h4>
 
@@ -126,7 +126,7 @@ function Footer() {
             </div>
 
             <p className="text-xs text-gray-400">
-              © 2024 CAKE SHOP. All rights reserved.
+              &copy; 2026 CAKE SHOP. All rights reserved.
             </p>
           </div>
         </div>
