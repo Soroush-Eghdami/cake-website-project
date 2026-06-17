@@ -11,8 +11,8 @@ const HeroSection = () => {
       <div className="absolute top-5 left-9 w-87 h-87 bg-white/5 rounded-[40%_90%_30%_70%/60%_90%_70%_80%]" />
       <div className="absolute bottom-8 right-89 w-77 h-88 bg-white/5 rounded-[90%_40%_30%_70%/60%_30%_70%_40%]" />
       <div className="absolute bottom-8 right-22 w-22 h-22 bg-white/5 rounded-[60%_40%_30%_50%/60%_30%_70%_90%]" />
-      <div className="max-w-6xl mx-auto px-4 py-12 md:py-16 relative z-10">
-
+      <div className="max-w-6xl mx-auto px-4 py-12 md:py-16 relative z-10"> 
+        
         {/* Mobile Layout */}
         <div className="flex md:hidden flex-col gap-6">
           <div className="flex items-start gap-4 relative">
