@@ -19,35 +19,31 @@ const MenuSection = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-4 md:flex md:flex-wrap gap-3">
 
-            <button className="flex flex-col items-center gap-2 px-5 py-3 bg-[#B83232] text-white rounded-2xl shadow-md shadow-red-300/30 hover:bg-red-900 transition-colors">
+            <button className="flex flex-col items-center gap-2 px-3 py-3 md:px-5 bg-[#B83232] text-white rounded-2xl shadow-md shadow-red-300/30 hover:bg-red-900 transition-colors">
               <MdAddCircleOutline />
-
               <span className="text-xs font-semibold">
                 CLASSIC
               </span>
             </button>
 
-            <button className="flex flex-col items-center gap-2 px-5 py-3 bg-[#f4eed4] text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
+            <button className="flex flex-col items-center gap-2 px-3 py-3 md:px-5 bg-[#f4eed4] text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
               <PiWineDuotone />
-
               <span className="text-xs font-semibold">
                 GOURMET
               </span>
             </button>
 
-            <button className="flex flex-col items-center gap-2 px-5 py-3 bg-[#f4eed4] text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
+            <button className="flex flex-col items-center gap-2 px-3 py-3 md:px-5 bg-[#f4eed4] text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
               <IoLocationOutline />
-
               <span className="text-xs font-semibold">
                 DESSERTS
               </span>
             </button>
 
-            <button className="flex flex-col items-center gap-2 px-5 py-3 bg-[#f4eed4] text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
+            <button className="flex flex-col items-center gap-2 px-3 py-3 md:px-5 bg-[#f4eed4] text-red-600 rounded-2xl hover:bg-red-100 transition-colors">
               <MdOutlineCookie />
-
               <span className="text-xs font-semibold tracking-wide">
                 COOKIES
               </span>
