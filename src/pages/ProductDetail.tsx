@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router";
 import { FaArrowLeft } from "react-icons/fa";
 import { products } from "../types/ProductTypes";
 import ProductHero from "../components/cards/ProductHero";
+import ProductAbout from "../components/cards/ProductAbout";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -20,6 +21,7 @@ const ProductDetail = () => {
       </Link>
 
       <ProductHero product={product} />
+      <ProductAbout product={product} />
     </div>
   );
 };
