@@ -1,25 +1,27 @@
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import pancake from "../../src/assets/HomeIcon/pancake.jpg";
-function ProductDetail() {
-  return (
-    <>
-      <section className="relative pt-8 pb-24 overflow-hidden">
-        <div className="relative max-w-5xl mx-auto px-6 pt-6 flex flex-wrap gap-6 text-[#B83232] font-bold text-sm md:text-base">
-          <div className="flex items-center gap-2">
-            <FaMapMarkerAlt />
-            123 Dessert St, Sweetville
-            <div className="flex items-center gap-2">
-              <FaPhoneAlt />
-              0121 3456 7890 | @cakehouse
-            </div>
-          </div>
-          <div className="relative mt-8">
-            <img src={pancake} alt="pancake" className="absolute inset-0 w-full h-full"/>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+import { useParams, Link } from "react-router";
+import { FaArrowLeft } from "react-icons/fa";
+import { products } from "../types/ProductTypes";
+import ProductHero from "../components/cards/ProductHero";
+
+const ProductDetail = () => {
+  const { id } = useParams<{ id: string }>();
+  const product = products.find((p) => p.id === Number(id));
+  if (!product) {
+  return <div>Product not found !</div>;
 }
+
+  return (
+    <div className="min-h-screen bg-[#FFF8F0] overflow-x-hidden relative">
+
+      <Link
+        to="/"
+        className="fixed top-16 right-6 md:top-24 z-50 flex items-center gap-2 bg-[#B83232] text-white px-5 py-2.5 rounded-full shadow-lg hover:bg-[#922727] hover:scale-105 transition-all duration-300">
+        <FaArrowLeft />
+      </Link>
+
+      <ProductHero product={product} />
+    </div>
+  );
+};
 
 export default ProductDetail;
