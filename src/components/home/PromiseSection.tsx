@@ -4,7 +4,6 @@ import { LuUsers } from "react-icons/lu";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 import Gallery from "./Gallery";
 
-
 const PromiseSection = () => {
   return (
     <section className="max-w-6xl mx-auto px-4 pb-14">
@@ -19,18 +18,14 @@ const PromiseSection = () => {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-
         {/* Left Side */}
         <div className="flex flex-col gap-4">
-
-          {/* Promise Cards */}
           <div className="bg-white rounded-2xl p-6 shadow-md">
             <p className="text-sm text-gray-400 italic mb-5">
               A glimpse of our world — no secrets, only heart!
             </p>
 
             <div className="grid grid-cols-4 gap-3">
-
               <div className="flex flex-col items-center gap-2 bg-[#B83232] text-white rounded-xl p-3 hover:bg-red-900 transition-colors">
                 <BsTruck className="w-7 h-7" />
 
@@ -62,14 +57,12 @@ const PromiseSection = () => {
                   BAKED FRESH
                 </span>
               </div>
-
             </div>
           </div>
 
           {/* Magical Ticket */}
           <div className="bg-white rounded-2xl p-6 shadow-md border-l-4 border-[#ffa70e]">
             <div className="flex items-start gap-4">
-
               <div className="shrink-0 w-16 h-16 bg-[#ffa70e] rounded-xl flex items-center justify-center shadow-lg shadow-yellow-900">
                 <BsTicketPerforated className="w-9 h-9 text-white" />
               </div>
@@ -87,19 +80,16 @@ const PromiseSection = () => {
                   UNLOCK NOW
                 </button>
               </div>
-
             </div>
           </div>
 
           {/* Social */}
           <div className="bg-white rounded-2xl px-5 py-3 shadow-md flex items-center justify-between">
-
             <p className="text-sm font-semibold text-gray-700 mr-auto">
               Follow us on social!
             </p>
 
             <div className="flex gap-2">
-
               <a className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-700 hover:bg-red-800 hover:text-white transition-colors">
                 <FaInstagram />
               </a>
@@ -111,17 +101,21 @@ const PromiseSection = () => {
               <a className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-700 hover:bg-red-800 hover:text-white transition-colors">
                 <FaTelegram />
               </a>
-
             </div>
           </div>
-
         </div>
 
         {/* Gallery */}
-          <div className="grid grid-cols-2 gap-3 rounded-2xl overflow-hidden shadow-md">
-            <Gallery />
-          </div>
-
+        <div className="grid grid-cols-2 gap-3 rounded-2xl overflow-hidden shadow-md">
+          <Gallery />
+        </div>
+      </div>
+      <div className="mt-6">
+        <div className="bg-[#B83232] rounded-2xl py-5 px-8 text-center shadow-xl shadow-red-200">
+          <p className="text-white font-serif text-lg md:text-xl font-bold">
+            Cake Shop – Exceptional Cakes, Unforgettable Memories
+          </p>
+        </div>
       </div>
     </section>
   );
