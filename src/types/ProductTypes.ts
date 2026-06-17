@@ -35,7 +35,7 @@ export const products: ProductTypes[] = [
     reviews: 300,
     image: pancake,
     description:
-      "Soft chocolate sponge layered with chocolate chips and creamy truffle frosting, finished with a generous topping of choco chips for extra crunch.",
+      "Soft chocolate sponge layered with chocolate chips and creamy truffle frosting, finished with a generous topping of choco chips for extra crunch. [With Banana & walnut]",
   },
   {
     id: 3,
