@@ -5,6 +5,7 @@ import ProductHero from "../components/cards/ProductHero";
 import ProductAbout from "../components/cards/ProductAbout";
 import ProductGallery from "../components/cards/ProductGallery";
 import ProductOrder from "../components/cards/ProductOrder";
+import ProductReviews from "../components/cards/ProductReviews";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -26,6 +27,7 @@ const ProductDetail = () => {
       <ProductAbout product={product} />
       <ProductGallery product={product} />
       <ProductOrder product={product} />
+      <ProductReviews />
     </div>
   );
 };
