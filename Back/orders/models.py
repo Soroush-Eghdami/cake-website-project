@@ -3,8 +3,6 @@ from django.conf import settings
 from django.core.validators import MinValueValidator
 from products.models import Product
 
-# Create your models here.
-
 class Order(models.Model):
     
     STATUS_CHOICES = [
@@ -35,4 +33,3 @@ class OrderItem(models.Model):
     
     def __str__(self):
         return f"{self.quantity} x {self.product_name} for Order {self.order.id}"
-    
