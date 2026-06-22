@@ -1,99 +1,58 @@
-# ── Python ────────────────────────────────────────────────────────────────────
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-*.egg
-*.egg-info/
-dist/
-build/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.whl
-MANIFEST
-pip-wheel-metadata/
+*.pyo
+*.pyd
+.Python
 
-# ── Virtual environments ───────────────────────────────────────────────────────
-.venv/
+# Virtual Environment
 venv/
 env/
-ENV/
-.env.bak
+.env/
+.venv/
 
-# ── Environment / secrets ──────────────────────────────────────────────────────
+# Environment Variables
 .env
 .env.local
-.env.*.local
-*.pem
-*.key
+.env.production
+*.env
 
-# ── Django ─────────────────────────────────────────────────────────────────────
+# Django
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-staticfiles/
 media/
 
-# ── Migrations (keep only if you want to track them — common to include them)
-# Uncomment the lines below to exclude migrations from version control.
-# */migrations/0*.py
+# Migrations (optional - some teams commit these, some don't)
+# */migrations/*.py
 # !*/migrations/__init__.py
 
-# ── Testing / coverage ─────────────────────────────────────────────────────────
-.pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-coverage.xml
-nosetests.xml
-pytest.xml
-*.pytest_cache
+# Static files
+staticfiles/
+static/
 
-# ── Type checking ──────────────────────────────────────────────────────────────
-.mypy_cache/
-.dmypy.json
-dmypy.json
-.pytype/
-.pyre/
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+*.egg
 
-# ── IDEs & editors ─────────────────────────────────────────────────────────────
+# IDE / Editor
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-.DS_Store
+*.DS_Store
 Thumbs.db
 
-# ── Docker ─────────────────────────────────────────────────────────────────────
-# Keep docker-compose.yml and Dockerfile tracked.
-# Ignore local override files.
-docker-compose.override.yml
-docker-compose.local.yml
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+coverage.xml
 
-# ── Node (if any frontend tooling is added later) ─────────────────────────────
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# ── Celery ─────────────────────────────────────────────────────────────────────
+# Celery (if you add it later)
 celerybeat-schedule
 celerybeat.pid
-
-# ── Misc ───────────────────────────────────────────────────────────────────────
-*.bak
-*.tmp
-*.orig
-.cache/
-*.pdf
-*.rar
-
-Tweeter API.yaml
