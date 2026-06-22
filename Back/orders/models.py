@@ -15,9 +15,18 @@ class Order(models.Model):
     ]
     
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
+    full_name = models.CharField(max_length=255)
+    phone_number = models.CharField(max_length=20)
     status = models.CharField(max_length=30, choices=STATUS_CHOICES, default='waiting_for_approval')
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    delivery_address = models.CharField(max_length=255)
+    city = models.CharField(max_length=100)
+    delivery_address = models.TextField()
+    notes = models.TextField(blank=True, null=True)
+    payment_method = models.CharField(max_length=20, choices=[
+    ('cash', 'Cash on Delivery'),
+    ('card', 'Card on Delivery'),
+    ('online', 'Online Payment'),
+    ], default='cash')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -30,6 +39,7 @@ class OrderItem(models.Model):
     product_name = models.CharField(max_length=255)
     quantity = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1)])
     price_at_purchase = models.DecimalField(max_digits=10, decimal_places=2)
+    old_price_at_purchase = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     
     def __str__(self):
         return f"{self.quantity} x {self.product_name} for Order {self.order.id}"
